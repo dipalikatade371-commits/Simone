@@ -10,7 +10,7 @@ router.use(express.static('public'));
 var conn=mysql.createConnection({
     host:'bd4xmdmkpdwvdcjaf1be-mysql.services.clever-cloud.com',
     user:'u7e9qv2kzzdjkhuw',
-    password:'u7e9qv2kzzdjkhuw',
+    password:'P0Gfqn8K3tFUXoj3W92O',
     database:'bd4xmdmkpdwvdcjaf1be',
 })
 var exe=util.promisify(conn.query).bind(conn);
