@@ -5,7 +5,7 @@ var util=require('util');
 router.use(express.urlencoded({extended:true}));
 
 router.use(express.static('public'));
-var conn=mysql.createConnection({
+var conn=mysql.createPool({
     host:'bd4xmdmkpdwvdcjaf1be-mysql.services.clever-cloud.com',
     user:'u7e9qv2kzzdjkhuw',
     password:'P0Gfqn8K3tFUXoj3W92O',
