@@ -8,11 +8,10 @@ var path = require('path');
 
 router.use(express.static('public'));
 var conn=mysql.createConnection({
-    host:'localhost',
-    user:'root',
-    password:'root',
-    database:'simone',
-    port:3306
+    host:'bd4xmdmkpdwvdcjaf1be-mysql.services.clever-cloud.com',
+    user:'u7e9qv2kzzdjkhuw',
+    password:'u7e9qv2kzzdjkhuw',
+    database:'bd4xmdmkpdwvdcjaf1be',
 })
 var exe=util.promisify(conn.query).bind(conn);
 router.use(express.urlencoded({extended:true}));
