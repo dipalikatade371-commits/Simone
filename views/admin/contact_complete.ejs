@@ -1,0 +1,77 @@
+
+<%-include('header.ejs'); %>
+
+      <div class="main">
+
+        <header class="topbar">
+
+          <h2>Contact Complete table</h2>
+
+          <div class="user">Welcome, Admin</div>
+
+        </header>
+
+        <section class="content">
+
+          <div class="panel">
+
+            <h3>Complete Contacts</h3>
+
+            <p class="hint">Sample rows for layout only.</p>
+
+            <table>
+
+              <thead>
+
+                <tr>
+
+                  <th>ID</th>
+
+                  <th>name</th>
+
+                  <th>email</th>
+
+                  <th>Message</th>
+
+                  <th>Date</th>
+
+
+
+                </tr>
+
+              </thead>
+
+              <tbody>
+
+                <% for (var i=0; i<data.length; i++) { %>
+
+                <tr>
+
+                  <td><%= i+1 %></td>
+
+                  <td><%=data[i].name %></td>
+
+                  <td><%=data[i].email%></td>
+
+                  <td><%=data[i].message%></td>
+
+                  <td><%=data[i].c_date %></td>
+
+
+                </tr>
+
+                <% } %>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </div>
+
+<%-include('footer.ejs'); %>

@@ -1,0 +1,117 @@
+
+<%- include('header.ejs') %>
+
+<section class="section" id="resume">
+
+    <div class="container">
+
+        <div class="section-head">
+            <div class="section-bg-title">Summary</div>
+            <h2 class="section-title">Resume</h2>
+        </div>
+
+
+        <!-- EDUCATION + EXPERIENCE -->
+        <div class="resume-cols">
+
+            <!-- EDUCATION -->
+            <div>
+
+                <h3>My Education</h3>
+
+                <% for(var i = 0; i < data1.length; i++) { %>
+
+                    <article class="timeline-card">
+
+                        <span class="badge">
+                            <%= data1[i].e_year %>
+                        </span>
+
+                        <h4>
+                            <%= data1[i].e_degree %>
+                        </h4>
+
+                        <div class="place">
+                            <%= data1[i].e_uni %>
+                        </div>
+
+                        <p>
+                            <%= data1[i].e_desc %>
+                        </p>
+
+                    </article>
+
+                <% } %>
+
+            </div>
+
+
+            <!-- EXPERIENCE -->
+            <div>
+
+                <h3>My Experience</h3>
+
+                <% for(var i = 0; i < data2.length; i++) { %>
+
+                    <article class="timeline-card">
+
+                        <span class="badge">
+                            <%= data2[i].d_year %>
+                        </span>
+
+                        <h4>
+                            <%= data2[i].d_posi %>
+                        </h4>
+
+                        <div class="place">
+                            <%= data2[i].d_comp %>
+                        </div>
+
+                        <p>
+                            <%= data2[i].d_desc %>
+                        </p>
+
+                    </article>
+
+                <% } %>
+
+            </div>
+
+        </div>
+
+<!-- SKILLS -->
+
+<div class="skills">
+
+    <h3>My Skills</h3>
+
+    <div class="skills-grid">
+
+        <% for(var i = 0; i < data3.length; i++) { %>
+
+            <div class="skill">
+
+                <header>
+                    <span>
+                        <%= data3[i].s_tech %>
+                    </span>
+
+                    <span>
+                        <%= data3[i].s_per %>
+                    </span>
+                </header>
+
+                <div class="bar">
+                    <span style="--skill-width: <%= data3[i].s_per %>%"></span>
+                </div>
+
+            </div>
+
+        <% } %>
+
+    </div>
+
+</div>
+</section>
+
+<%- include('footer.ejs') %>

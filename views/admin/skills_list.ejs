@@ -1,0 +1,46 @@
+
+
+<%-include('header.ejs'); %>
+      <div class="main">
+        <header class="topbar">
+          <h2>Skills table</h2>
+          <div class="user">Welcome, Admin</div>
+        </header>
+
+        <section class="content">
+          <div class="panel">
+            <h3>Users Skills</h3>
+            <p class="hint">Sample rows for layout only.</p>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Technology</th>
+                  <th>Percentage</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% for (var i=0;i<data3.length;i++){ %>
+                <tr>
+                  <td><%= i+1 %></td>
+                  <td><%=data3[i].s_tech %></td>
+                  <td><%=data3[i].s_per %></td>
+                  
+                 
+                   <td>
+                     <a href="/admin/delete_skills/<%=data3[i].sid%>">
+                            <span class="badge badge-off">Delete</span>
+                        </a>
+                </tr>
+              <% } %>
+              </tbody>
+
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+    
+<%-include('footer.ejs'); %>

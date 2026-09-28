@@ -1,0 +1,68 @@
+<%- include('header.ejs'); %>
+
+<div class="content">
+
+    <div class="panel">
+
+        <h3>Client List</h3>
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <% for(var i=0;i<data.length;i++) { %>
+
+                <tr>
+
+                    <td>
+                        <%=i+1%>
+                    </td>
+
+                    <td>
+                        <img src="/image/<%=data[i].c_img%>" width="70">
+                    </td>
+
+                    <td>
+                        <%=data[i].c_name%>
+                    </td>
+
+                    <td>
+                        <%=data[i].c_position%>
+                    </td>
+
+                    <td>
+                        <%=data[i].c_desc%>
+                    </td>
+
+                    <td>
+                        <a href="/admin/delete_client/<%=data[i].cid%>">
+                            <span class="badge badge-off">Delete</span>
+                        </a>
+                    </td>
+
+                </tr>
+
+                <% } %>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<%- include('footer.ejs'); %>

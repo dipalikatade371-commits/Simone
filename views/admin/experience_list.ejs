@@ -1,0 +1,68 @@
+<%- include('header.ejs'); %>
+
+<div class="content">
+
+    <div class="panel">
+
+        <h3>Experience List</h3>
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Year</th>
+                    <th>Position</th>
+                    <th>Company</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <% for(var i=0;i<data2.length;i++) { %>
+
+                <tr>
+
+                    <td>
+                        <%=i+1%>
+                    </td>
+
+                    <td>
+                        <%=data2[i].d_year%>
+                    </td>
+
+                    <td>
+                        <%=data2[i].d_posi%>
+                    </td>
+
+                    <td>
+                        <%=data2[i].d_comp%>
+                    </td>
+
+                    <td>
+                        <%=data2[i].d_desc%>
+                    </td>
+
+                    <td>
+                        <a href="/admin/delete_experience/<%=data2[i].sid%>">
+                            <span class="badge badge-off">Delete</span>
+                        </a>
+                    </td>
+
+                </tr>
+
+                <% } %>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<%- include('footer.ejs'); %>

@@ -1,0 +1,58 @@
+<%- include('header.ejs'); %>
+
+<section class="section" id="clients">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="section-bg-title">
+                TESTIMONIAL
+            </div>
+
+            <h2 class="section-title">
+                Client Speak
+            </h2>
+
+        </div>
+
+
+        <div class="clients-grid">
+
+            <% for(var i=0;i<data.length;i++) { %>
+
+            <div class="client-card">
+
+                <p class="client-quote">
+                    “<%=data[i].c_desc%>”
+                </p>
+
+                <div class="client-info">
+
+                    <img src="/image/<%=data[i].c_img%>" alt="">
+
+                    <div>
+
+                        <h4>
+                            <%=data[i].c_name%>
+                        </h4>
+
+                        <span>
+                            <%=data[i].c_position%>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <% } %>
+
+        </div>
+
+    </div>
+
+</section>
+
+<%- include('footer.ejs'); %>

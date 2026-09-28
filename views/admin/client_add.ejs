@@ -1,0 +1,41 @@
+<%- include('header.ejs'); %>
+
+<div class="content">
+
+    <div class="panel">
+
+        <h3>Client Add</h3>
+
+        <form action="/admin/client_save" method="post" enctype="multipart/form-data">
+
+            <div class="field">
+                <label>Client Image</label>
+                <input type="file" name="c_img">
+            </div>
+
+            <div class="field">
+                <label>Client Name</label>
+                <input type="text" name="c_name" placeholder="Client Name">
+            </div>
+
+            <div class="field">
+                <label>Position</label>
+                <input type="text" name="c_position" placeholder="Founder at Company">
+            </div>
+
+            <div class="field">
+                <label>Description</label>
+                <textarea name="c_desc" placeholder="Client testimonial"></textarea>
+            </div>
+
+            <button type="submit" class="btn">
+                Save
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<%- include('footer.ejs'); %>

@@ -1,0 +1,56 @@
+<%- include('header.ejs'); %>
+
+<div class="content">
+
+    <div class="panel">
+
+        <h3>Education List</h3>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Year</th>
+                    <th>Degree</th>
+                    <th>University</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <% for(var i=0;i<data1.length;i++) { %>
+
+                <tr>
+
+                    <td><%=i+1%></td>
+
+                    <td><%=data1[i].e_year%></td>
+
+                    <td><%=data1[i].e_degree%></td>
+
+                    <td><%=data1[i].e_uni%></td>
+
+                    <td><%=data1[i].e_desc%></td>
+
+                    <td>
+                        <a href="/admin/delete_education/<%=data1[i].sid%>">
+                            <span class="badge badge-off">Delete</span>
+                        </a>
+                    </td>
+
+                </tr>
+
+                <% } %>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<%- include('footer.ejs'); %>

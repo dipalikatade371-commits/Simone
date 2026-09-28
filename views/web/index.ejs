@@ -1,0 +1,29 @@
+<%-include('header.ejs') %>
+
+<section class="hero" id="home" style="background: linear-gradient(rgba(3, 3, 3, 0.62), rgba(8,10,12,0.72)), url('/image/<%=data.h_img%>') center / cover no-repeat;">
+
+    <div class="hero__social" aria-label="Social links">
+
+        <a href="#" aria-label="Twitter">Tw</a>
+
+        <a href="#" aria-label="Facebook">Fb</a>
+
+        <a href="#" aria-label="Dribbble">Dr</a>
+
+        <a href="#" aria-label="GitHub">Gh</a>
+
+    </div>
+
+    <div>
+
+        <h1>I'm <span id="typed"><%=data.h_title1%></span></h1>
+
+        <p><%=data.h_desc%></p>
+
+    </div>
+
+    <a class="scroll-hint" href="/about" aria-label="Scroll to about"></a>
+
+</section>
+
+<%-include('footer.ejs') %>

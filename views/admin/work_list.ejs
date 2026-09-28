@@ -1,0 +1,61 @@
+<%- include('header.ejs'); %>
+
+<div class="content">
+
+    <div class="panel">
+
+        <h3>Work List</h3>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <% for(var i=0;i<work.length;i++) { %>
+
+                <tr>
+
+                    <td>
+                        <%=i+1%>
+                    </td>
+
+                    <td>
+                        <img src="/image/<%=work[i].w_img%>" width="100">
+                    </td>
+
+                    <td>
+                        <%=work[i].w_title%>
+                    </td>
+
+                    <td>
+                        <%=work[i].w_desc%>
+                    </td>
+
+                    <td>
+                        <a href="/admin/delete_work/<%=work[i].sid%>">
+                            <span class="badge badge-off">Delete</span>
+                        </a>
+                    </td>
+
+                </tr>
+
+                <% } %>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<%- include('footer.ejs'); %>

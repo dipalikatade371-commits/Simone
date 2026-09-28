@@ -1,0 +1,42 @@
+<%- include('header.ejs'); %>
+
+<section class="section" id="portfolio">
+
+    <div class="container">
+
+        <div class="section-head">
+            <div class="section-bg-title">Portfolio</div>
+            <h2 class="section-title">My Work</h2>
+        </div>
+
+        <div class="portfolio-grid">
+
+            <% for(var i=0;i<work.length;i++) { %>
+
+            <div class="portfolio-card">
+
+                <img src="/image/<%=work[i].w_img%>" alt="">
+
+                <div class="portfolio-info">
+
+                    <h3>
+                        <%=work[i].w_title%>
+                    </h3>
+
+                    <p>
+                        <%=work[i].w_desc%>
+                    </p>
+
+                </div>
+
+            </div>
+
+            <% } %>
+
+        </div>
+
+    </div>
+
+</section>
+
+<%- include('footer.ejs'); %>

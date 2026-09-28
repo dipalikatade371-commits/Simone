@@ -1,0 +1,31 @@
+<%- include('header.ejs'); %>
+
+<div class="content">
+
+    <div class="panel">
+
+        <h3>Skills Add</h3>
+
+        <form action="/admin/skills_save" method="post">
+
+            <div class="field">
+                <label>Skill Name</label>
+                <input type="text" name="s_tech" placeholder="HTML">
+            </div>
+
+            <div class="field">
+                <label>Percentage</label>
+                <input type="number" name="s_per" placeholder="90">
+            </div>
+
+            <button type="submit" class="btn">
+                Save
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<%- include('footer.ejs'); %>

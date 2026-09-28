@@ -1,0 +1,142 @@
+<%-include('header.ejs'); %>
+
+      <div class="main">
+        <header class="topbar">
+          <h2>Update About record</h2>
+          <div class="user">Welcome, Admin</div>
+        </header>
+
+        <section class="content">
+          <div class="panel">
+
+            <h3>About form</h3>
+
+            <p class="hint">Update About information.</p>
+
+            <form class="form" action="/admin/about_update_save/<%=data.id%>" method="post">
+
+              <div class="row">
+
+                <div class="field">
+                  <label for="name">Name</label>
+                  <input id="name" type="text" name="a_name" value="<%=data.a_name%>" placeholder="name...." />
+                </div>
+
+                <div class="field">
+                  <label for="title">Title</label>
+                  <input id="title" type="text" name="a_title" value="<%=data.a_title%>" placeholder="title...." />
+                </div>
+
+              </div>
+
+
+              <div class="field">
+
+                <label for="desc1">About Description 1</label>
+
+                <textarea id="desc1" name="a_desc1" placeholder="About description..."><%=data.a_desc1%></textarea>
+
+              </div>
+
+
+              <div class="field">
+
+                <label for="desc2">About Description 2</label>
+
+                <textarea id="desc2" name="a_desc2" placeholder="About description..."><%=data.a_desc2%></textarea>
+
+              </div>
+
+
+              <div class="row">
+
+                <div class="field">
+
+                  <label for="email">Email</label>
+
+                  <input id="email" type="email" name="a_email" value="<%=data.a_email%>" placeholder="email...." />
+
+                </div>
+
+
+                <div class="field">
+
+                  <label for="age">Age</label>
+
+                  <input id="age" type="number" name="a_age" value="<%=data.a_age%>" placeholder="age...." />
+
+                </div>
+
+              </div>
+
+
+              <div class="field">
+
+                <label for="from">From</label>
+
+                <input id="from" type="text" name="a_from" value="<%=data.a_from%>" placeholder="location...." />
+
+              </div>
+
+
+              <div class="row">
+
+                <div class="field">
+
+                  <label for="experience">Years Experience</label>
+
+                  <input id="experience" type="text" name="a_experience" value="<%=data.a_experience%>" placeholder="10+..." />
+
+                </div>
+
+
+                <div class="field">
+
+                  <label for="clients">Happy Clients</label>
+
+                  <input id="clients" type="text" name="a_clients" value="<%=data.a_clients%>" placeholder="250+..." />
+
+                </div>
+
+              </div>
+
+
+              <div class="row">
+
+                <div class="field">
+
+                  <label for="projects">Projects Done</label>
+
+                  <input id="projects" type="text" name="a_projects" value="<%=data.a_projects%>" placeholder="650+..." />
+
+                </div>
+
+
+                <div class="field">
+
+                  <label for="awards">Awards</label>
+
+                  <input id="awards" type="text" name="a_awards" value="<%=data.a_awards%>" placeholder="20..." />
+
+                </div>
+
+              </div>
+
+
+              <div class="actions">
+
+                <button class="btn" type="submit">Update</button>
+
+                <button class="btn btn-ghost" type="reset">Clear</button>
+
+              </div>
+
+            </form>
+
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+<%-include('footer.ejs'); %>

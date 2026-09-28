@@ -1,0 +1,36 @@
+<%- include('header.ejs'); %>
+
+<div class="content">
+
+    <div class="panel">
+
+        <h3>Work Add</h3>
+
+        <form action="/admin/work_save" method="post" enctype="multipart/form-data">
+
+            <div class="field">
+                <label>Image</label>
+                <input type="file" name="w_img">
+            </div>
+
+            <div class="field">
+                <label>Title</label>
+                <input type="text" name="w_title" placeholder="Project Title">
+            </div>
+
+            <div class="field">
+                <label>Description</label>
+                <textarea name="w_desc" placeholder="Enter project description"></textarea>
+            </div>
+
+            <button type="submit" class="btn">
+                Save
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<%- include('footer.ejs'); %>
